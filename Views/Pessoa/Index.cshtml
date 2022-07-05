@@ -1,0 +1,42 @@
+﻿@Model List<PessoaModel>
+@{
+    ViewData["Title"] = "Listagem Pessoas";
+}
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class=" btn btn-primary" role="button"asp-controller="Pessoa" asp-action="Criar">Adicionar Nova Pessoa</a>
+    </div>
+    <div class=" text-center">
+<h1 class="display-4">Listagem de Pessoas</h1>
+    </div>
+<br />
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">E-Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @if (Model != null)
+            {
+                foreach (PessoaModel pessoa in Model)
+                {
+                     <tr>
+                        <th scope="row">@pessoa.Id</th>
+                        <td>@pessoa.Nome</td>
+                        <td>@pessoa.Telefone</td>
+                        <td>@pessoa.Email</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-primary"asp-route-id="@pessoa.Id" asp-controller="Pessoa" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@pessoa.Id" asp-controller="Pessoa" asp-action="Deletar">Deletar</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                }
+            }
+        </tbody>
+</table>
