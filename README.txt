@@ -1,19 +1,35 @@
-Aplicação Funcional
+# Cadastro de Pessoas MVC 👥
 
-Criado o Crud, todos os metodos funcionando CRIAR, EDITAR, LISTAR E DELETAR
+## 📌 Descrição
+Projeto desenvolvido em **ASP.NET MVC** com o objetivo de implementar um CRUD completo para gerenciamento de pessoas.  
+Este repositório foi criado como prática de desenvolvimento web com .NET e SQL Server.
 
-Para utilizar a Aplicação é necessário:
--Visual Studio
--Sql Server
+## 🛠️ Tecnologias Utilizadas
+- ASP.NET MVC (.NET 5.0)
+- C#
+- Entity Framework Core
+- SQL Server
+- Visual Studio
 
-Para criar o Banco de dados é necessario mudar o caminho do Banco de Dados no Arquivo appsettings.json ("ConnectionStrings": {
-    "DataBase": "Server= SUA.MAQUINA.AQUI; initial catalog = Database=NOME.DO.BANCO.QUE.DESEJA.CRIAR; Integrated Security = true"
+## 🚀 Funcionalidades
+- Criar novos registros de pessoas.
+- Editar informações existentes.
+- Listar todos os registros.
+- Deletar registros.
 
-Com o Visual Studio aberto, execute os seguintes comandos no Terminal do Nuget:
+## 🎯 Objetivo do Projeto
+Explorar conceitos fundamentais de desenvolvimento web com ASP.NET MVC e Entity Framework, incluindo:
+- Estruturação de controllers, models e views.
+- Configuração de banco de dados com migrations.
+- Implementação de operações CRUD.
 
-  add-migration CriandoTabelaDePessoas -Context NOME.DO.BANCO.CRIADO   - PARA CRIAR O BANCO DE DADOS
-  
-  Update-DataBase -Context NOME.DO.BANCO.CRIADO   - PARA ATUALIZAR O BANCO DE DADOS
+## 📂 Estrutura do Projeto
+- **Controllers** → Lógica de controle das rotas.
+- **Models** → Estrutura de dados da aplicação.
+- **Views** → Interface para interação com o usuário.
+- **Data/Migrations** → Configuração e criação do banco de dados.
 
-
-
+## ▶️ Como Executar
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/EmmanuelTorresBackEnd/CadastroPessoasMVC.git
